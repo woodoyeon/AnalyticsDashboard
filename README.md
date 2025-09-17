@@ -5,6 +5,23 @@ React+TypeScript 기반으로 **실시간 차트**, **대시보드 구성**, **�
 
 ---
 
+## 🎥 시연 동영상 미리보기
+
+<div align="center" style="margin: 20px 0;">
+  <a href="./Analytics.mp4" target="_blank" 
+     style="display:inline-block;margin:10px;padding:14px 22px;border-radius:12px;background:#E50914;color:#fff;
+            font-weight:700;text-decoration:none;font-size:16px;box-shadow:0 6px 20px rgba(0,0,0,.15);">
+    🎬 ▶ 시연 동영상 보기
+  </a>
+  <p align="center">
+    <sub>▶ 버튼을 클릭하면 <code>Analytics.mp4</code> 파일이 새 탭에서 열리며,  
+    브라우저 설정에 따라 다운로드되거나 기본 플레이어에서 재생됩니다.</sub>
+  </p>
+</div>
+
+---
+
+
 ## ✨ 핵심 가치 (Why)
 
 * **한 곳에서 분석**: 파일·DB·API 등 소스가 달라도 하나의 대시보드에서 통합 분석
