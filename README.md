@@ -5,19 +5,15 @@
 파일·DB·API에서 수집한 데이터를 한 곳에서 **정제 → 분석 → 시각화**하고, **AI 요약·RAG 질의응답**까지 확장 가능한 개인 프로젝트입니다.
 React + TypeScript 기반으로 **실시간 차트**, **데이터 파이프라인 데모**, **알고리즘 시각화** 등을 제공합니다.
 
-<p align="left">
-  <a href="./Analytics.mp4"><b>🎬 시연 동영상 보기</b></a>
-</p>
-
-## 📑 프로젝트 리포트
-
 <p align="center">
   <a href="./테크리포트.pdf" download>
-    <img src="https://img.shields.io/badge/Download-Tech_Report-ff69b4?style=for-the-badge&logo=github&logoColor=white" alt="Tech Report"/>
+    <img src="https://img.shields.io/badge/📑_Tech_Report-Download-003399?style=for-the-badge&logo=adobeacrobatreader&logoColor=white" alt="Tech Report"/>
+  </a>
+  &nbsp;
+  <a href="./Analytics.mp4">
+    <img src="https://img.shields.io/badge/🎬_Demo_Video-Watch-ff3333?style=for-the-badge&logo=youtube&logoColor=white" alt="Demo Video"/>
   </a>
 </p>
-
-> 👉 위 버튼을 클릭하면 **테크 리포트 PDF**를 다운로드할 수 있습니다.
 
 
 ---
