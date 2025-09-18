@@ -1,7 +1,4 @@
-좋지! 아래 그대로 `README.md`에 붙여 쓰면 돼.
-(스크린샷은 리포지토리 안의 `docs/` 폴더에 넣고, 파일명은 내가 쓴 것처럼 맞춰줘: `홈.png, 문제1.png ... 문제8.png, 마무리.png`)
 
----
 
 # 📊 AI Analytics Dashboard — 데이터 분석 자동화 & 시각화
 
@@ -88,7 +85,7 @@ pnpm dev   # http://localhost:5173
 
 ### 홈: 대시보드
 
-<img src="./docs/홈.png" alt="홈 대시보드" />
+<img src="./docs/홈.PNG" alt="홈 대시보드" />
 
 * **AI Chat Control**로 카드/문제 페이지를 명령형으로 제어
 * 각 카드에서 데모 페이지로 이동해 **즉시 실행** 가능
