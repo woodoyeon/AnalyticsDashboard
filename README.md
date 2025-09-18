@@ -94,7 +94,7 @@ pnpm dev   # http://localhost:5173
 
 ### 문제 1: CSV 파일 분석
 
-<img src="./docs/문제1.png" alt="문제 1 CSV 분석" />
+<img src="./docs/문제1.PNG" alt="문제 1 CSV 분석" />
 
 * **스트리밍 파싱(선택)** + 스키마 검증 → **오류 행 분리**
 * 유효/오류 비율 도넛, 상위 비숫자 토큰, 기본 통계(합·평균 등)
@@ -103,7 +103,7 @@ pnpm dev   # http://localhost:5173
 
 ### 문제 2: Ping-Pong 통신
 
-<img src="./docs/문제2.png" alt="문제 2 Ping-Pong 통신" />
+<img src="./docs/문제2.PNG" alt="문제 2 Ping-Pong 통신" />
 
 * **WebSocket**으로 클라이언트–서버 간 **Sync/Async** 플로우 시뮬레이션
 * 최근 20개 **RTT(왕복시간)** 차트, 메시지 로그, 프로토콜(TCP/UDP) 토글
@@ -112,7 +112,7 @@ pnpm dev   # http://localhost:5173
 
 ### 문제 3: DB 연결 & 쿼리
 
-<img src="./docs/문제3.png" alt="문제 3 DB 쿼리" />
+<img src="./docs/문제3.PNG" alt="문제 3 DB 쿼리" />
 
 * 날짜/성별/부서/직급 필터 → 테이블 & 차트 동기화
 * 요약 통계: 인원, 평균 급여, 최소/최대 급여
@@ -121,7 +121,7 @@ pnpm dev   # http://localhost:5173
 
 ### 문제 4: 기온·습도 차트
 
-<img src="./docs/문제4.png" alt="문제 4 기온 습도 차트" />
+<img src="./docs/문제4.PNG" alt="문제 4 기온 습도 차트" />
 
 * 월별 입력값 → 라인/막대/에어리어 **복합 시각화**
 * 이동평균, 정규화 레이더 차트로 **패턴 비교**
@@ -130,7 +130,7 @@ pnpm dev   # http://localhost:5173
 
 ### 문제 5: 랜덤 응답 카운트(SSE)
 
-<img src="./docs/문제5.png" alt="문제 5 랜덤 응답 SSE" />
+<img src="./docs/문제5.PNG" alt="문제 5 랜덤 응답 SSE" />
 
 * **Server-Sent Events**로 1\~50 동시성, 회수·지연 제어
 * 진행률/결과 누적 모드, 최근 응답 미리보기
@@ -139,7 +139,7 @@ pnpm dev   # http://localhost:5173
 
 ### 문제 6: Top Laser (Monotonic Stack)
 
-<img src="./docs/문제6.png" alt="문제 6 Top Laser" />
+<img src="./docs/문제6.PNG" alt="문제 6 Top Laser" />
 
 * 막대 그래프 + **레이저 시각화**로 **단조 스택 O(N)** 풀이 과정을 단계별 표시
 * 스텝 인덱스, push/pop 과정이 **UI에 그대로 설명**
@@ -148,7 +148,7 @@ pnpm dev   # http://localhost:5173
 
 ### 문제 7: 가장 긴 유효한 괄호
 
-<img src="./docs/문제7.png" alt="문제 7 유효 괄호" />
+<img src="./docs/문제7.PNG" alt="문제 7 유효 괄호" />
 
 * 스택 기반 알고리즘을 **프리뷰/페어 시각화**로 확인
 * 최장 길이, 구간, 부분 문자열을 결과로 출력
@@ -157,7 +157,7 @@ pnpm dev   # http://localhost:5173
 
 ### 문제 8: 조세퍼스 순열
 
-<img src="./docs/문제8.png" alt="문제 8 조세퍼스 순열" />
+<img src="./docs/문제8.PNG" alt="문제 8 조세퍼스 순열" />
 
 * 원형 시뮬레이터로 제거 순서를 **단계별 애니메이션**
 * 오른쪽 차트/테이블에 **제거 순서 기록** + CSV 저장
@@ -166,7 +166,7 @@ pnpm dev   # http://localhost:5173
 
 ### 마무리: 디자인 요약
 
-<img src="./docs/마무리.png" alt="마무리 디자인 요약" />
+<img src="./docs/마무리.PNG" alt="마무리 디자인 요약" />
 
 * **공통 레이아웃**(사이드바+헤더+3컬럼)
 * **디자인 시스템**: Tailwind + shadcn/ui, 브랜드 컬러(#003399)
@@ -222,15 +222,15 @@ POST /api/ai/rag-query        # 벡터검색+Q&A
 ├─ README.md
 └─ docs/
    ├─ 홈.png
-   ├─ 문제1.png
-   ├─ 문제2.png
-   ├─ 문제3.png
-   ├─ 문제4.png
-   ├─ 문제5.png
-   ├─ 문제6.png
-   ├─ 문제7.png
-   ├─ 문제8.png
-   └─ 마무리.png
+   ├─ 문제1.PNG
+   ├─ 문제2.PNG
+   ├─ 문제3.PNG
+   ├─ 문제4.PNG
+   ├─ 문제5.PNG
+   ├─ 문제6.PNG
+   ├─ 문제7.PNG
+   ├─ 문제8.PNG
+   └─ 마무리.PNG
 ```
 
-필요하면 **영문 버전 README**도 바로 만들어줄게.
+
