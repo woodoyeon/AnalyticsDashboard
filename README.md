@@ -9,6 +9,17 @@ React + TypeScript 기반으로 **실시간 차트**, **데이터 파이프라�
   <a href="./Analytics.mp4"><b>🎬 시연 동영상 보기</b></a>
 </p>
 
+## 📑 프로젝트 리포트
+
+<p align="center">
+  <a href="./테크리포트.pdf" download>
+    <img src="https://img.shields.io/badge/Download-Tech_Report-ff69b4?style=for-the-badge&logo=github&logoColor=white" alt="Tech Report"/>
+  </a>
+</p>
+
+> 👉 위 버튼을 클릭하면 **테크 리포트 PDF**를 다운로드할 수 있습니다.
+
+
 ---
 
 ## 🔎 목차
