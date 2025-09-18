@@ -1,26 +1,42 @@
-# 📊 AI Analytics Dashboard — 데이터 분석 자동화 & 시각화 플랫폼
-
-파일·DB·API에서 수집한 데이터를 한 곳에서 정제·분석·시각화하고, **AI 요약·RAG 질의응답**까지 확장 가능한 개인 프로젝트입니다.
-React+TypeScript 기반으로 **실시간 차트**, **대시보드 구성**, **데이터 파이프라인(수집→정제→가공)** 흐름을 보여줍니다.
+좋지! 아래 그대로 `README.md`에 붙여 쓰면 돼.
+(스크린샷은 리포지토리 안의 `docs/` 폴더에 넣고, 파일명은 내가 쓴 것처럼 맞춰줘: `홈.png, 문제1.png ... 문제8.png, 마무리.png`)
 
 ---
 
-## 🎥 시연 동영상 미리보기
+# 📊 AI Analytics Dashboard — 데이터 분석 자동화 & 시각화
 
-<div align="center" style="margin: 20px 0;">
-  <a href="./Analytics.mp4" target="_blank" 
-     style="display:inline-block;margin:10px;padding:14px 22px;border-radius:12px;background:#E50914;color:#fff;
-            font-weight:700;text-decoration:none;font-size:16px;box-shadow:0 6px 20px rgba(0,0,0,.15);">
-    🎬 ▶ 시연 동영상 보기
-  </a>
-  <p align="center">
-    <sub>▶ 버튼을 클릭하면 <code>Analytics.mp4</code> 파일이 새 탭에서 열리며,  
-    브라우저 설정에 따라 다운로드되거나 기본 플레이어에서 재생됩니다.</sub>
-  </p>
-</div>
+파일·DB·API에서 수집한 데이터를 한 곳에서 **정제 → 분석 → 시각화**하고, **AI 요약·RAG 질의응답**까지 확장 가능한 개인 프로젝트입니다.
+React + TypeScript 기반으로 **실시간 차트**, **데이터 파이프라인 데모**, **알고리즘 시각화** 등을 제공합니다.
+
+<p align="left">
+  <a href="./Analytics.mp4"><b>🎬 시연 동영상 보기</b></a>
+</p>
 
 ---
 
+## 🔎 목차
+
+* [핵심 가치 (Why)](#-핵심-가치-why)
+* [주요 기능 (What)](#-주요-기능-what)
+* [기술 스택 (How)](#-기술-스택-how)
+* [빠른 시작](#-빠른-시작)
+* [대표 화면 & 설명](#-대표-화면--설명)
+
+  * [홈: 대시보드](#홈-대시보드)
+  * [문제 1: CSV 파일 분석](#문제-1-csv-파일-분석)
+  * [문제 2: Ping-Pong 통신](#문제-2-ping-pong-통신)
+  * [문제 3: DB 연결 & 쿼리](#문제-3-db-연결--쿼리)
+  * [문제 4: 기온·습도 차트](#문제-4-기온습도-차트)
+  * [문제 5: 랜덤 응답 카운트(SSE)](#문제-5-랜덤-응답-카운트SSE)
+  * [문제 6: Top Laser (Monotonic Stack)](#문제-6-top-laser-monotonic-stack)
+  * [문제 7: 가장 긴 유효한 괄호](#문제-7-가장-긴-유효한-괄호)
+  * [문제 8: 조세퍼스 순열](#문제-8-조세퍼스-순열)
+  * [마무리: 디자인 요약](#마무리-디자인-요약)
+* [API 예시](#-api-예시)
+* [품질 & 로드맵](#-품질--로드맵)
+* [라이선스 & 문의](#-라이선스--문의)
+
+---
 
 ## ✨ 핵심 가치 (Why)
 
@@ -29,217 +45,195 @@ React+TypeScript 기반으로 **실시간 차트**, **대시보드 구성**, **�
 * **AI 확장성**: 요약(LLM) + RAG 질의응답 구조를 고려한 설계
 * **개발 효율**: 타입 안정성(TypeScript), 재사용 가능한 컴포넌트, 미니멀 UI
 
----
-
 ## 🧩 주요 기능 (What)
 
-* **데이터 수집 파이프라인**
-
-  * CSV 업로드 및 파싱(결측/이상치 기본 필터링)
-  * DB/REST API로부터 비동기 수집(샘플 엔드포인트 포함)
-* **데이터 전처리 & 통계**
-
-  * 행 단위 유효성 검증(숫자 검출, 오류 행 분리)
-  * 기본 통계: 최소/최대/합계/평균/표준편차/중앙값
-* **실시간 시각화**
-
-  * Recharts 기반 Line/Bar/Area 등 **반응형 차트**
-  * 입력 테이블 ↔ 차트 **양방향 갱신**
-* **AI 요약 & RAG(확장 포인트)**
-
-  * 요약/인사이트 초안 생성 훅
-  * 벡터 임베딩/검색기반 Q\&A를 위한 모듈 경로 예약
-* **UX 보조**
-
-  * 랜덤 데이터 채우기(데모용)
-  * 다크 모드(선택) & 접근성 고려(키보드 내비, ARIA 일부)
-
----
+* **데이터 수집 파이프라인**: CSV 업로드/파싱, DB/REST API 비동기 수집
+* **전처리 & 통계**: 유효성 검사, 오류 행 분리, 합/평균/표준편차 등 요약 통계
+* **실시간 시각화**: Recharts 기반 라인/막대/에어리어 차트, 반응형 레이아웃
+* **AI 요약 & RAG(옵션)**: 요약/인사이트 초안, 임베딩·벡터검색 연동 지점 제공
+* **UX 보조**: 랜덤 데이터 주입, 다크 모드(선택), 접근성 고려
 
 ## 🛠 기술 스택 (How)
 
-* **Frontend**: React, TypeScript, Vite, Tailwind CSS, shadcn/ui, Recharts
-* **Backend**: Node.js (Express)
-* **Data/AI(옵션)**: CSV/REST, (선택) OpenAI·RAG 모듈 연결
-* **Dev/Collab**: ESLint, Prettier, GitHub Actions(빌드·테스트)
+**Frontend**: React, TypeScript, Vite, Tailwind, shadcn/ui, Recharts
+**Backend**: Node.js(Express)
+**Data/AI(옵션)**: CSV/REST, (옵션) OpenAI·Vector DB
+**Dev**: ESLint, Prettier, GitHub Actions
 
 ---
 
-## 🧱 아키텍처 개요
-
-```
-[Data Sources] ── CSV / REST API / DB
-       │
-       ▼
-[Ingest Layer] ── parsers/validators (CSV, JSON) → error rows 분리
-       │
-       ▼
-[Processing] ── stats() · normalize() · outlier check
-       │
-       ├─► [AI Layer (opt)] summarize() · embed() · RAG()
-       │
-       ▼
-[UI State] ── Zustand(or React state) · Query Cache
-       │
-       ▼
-[Visualization] ── Recharts(Responsive charts) + shadcn/ui
-```
-
----
-
-## 📁 프로젝트 구조
-
-```
-analytics-dashboard/
-├─ apps/
-│  ├─ web/                     # React + TS 프론트엔드
-│  │  ├─ src/components/      # ChartCard, DataTable, StatBadge, ...
-│  │  ├─ src/features/
-│  │  │  ├─ csv/              # CSV 업로드/파싱/검증 훅·유틸
-│  │  │  ├─ charts/           # Recharts 래퍼, 공통 옵션
-│  │  │  └─ ai/               # (옵션) 요약·RAG 훅
-│  │  ├─ src/lib/             # utils: stats, validators, formatters
-│  │  └─ src/pages/           # /dashboard, /ingest, /playground
-│  └─ server/                  # Express API
-│     ├─ routes/              # /api/data, /api/mock, /api/ai (opt)
-│     └─ services/            # db.ts, vector.ts(opt), summarize.ts(opt)
-├─ packages/
-│  └─ shared/                  # 공통 타입 정의, 유틸
-└─ README.md
-```
-
----
-
-## 🚀 빠른 시작 (Local)
-
-> Node.js 20 LTS 권장
+## 🚀 빠른 시작
 
 ```bash
-# 1) 의존성 설치
+# 1) 의존성
 npm i -g pnpm@9
 pnpm install
 
-# 2) 서버 실행 (백엔드)
+# 2) 서버 (백엔드)
 cd apps/server
-cp .env.example .env   # 필요 시 API KEY 등 입력
-pnpm dev               # http://localhost:3001
+cp .env.example .env
+pnpm dev   # http://localhost:3001
 
-# 3) 웹 실행 (프론트)
+# 3) 웹 (프론트)
 cd ../web
-cp .env.example .env   # VITE_API_BASE 등 설정
-pnpm dev               # http://localhost:5173
-```
-
-### 환경 변수 예시
-
-`apps/server/.env`
-
-```
-PORT=3001
-# 선택: AI 요약/RAG 사용 시
-OPENAI_API_KEY=...
-VECTOR_DB_URL=...
-```
-
-`apps/web/.env`
-
-```
-VITE_API_BASE=http://localhost:3001
+cp .env.example .env   # VITE_API_BASE=http://localhost:3001
+pnpm dev   # http://localhost:5173
 ```
 
 ---
 
-## 🧪 샘플 사용 흐름
+## 🖼 대표 화면 & 설명
 
-1. **CSV 업로드** → 자동 파싱 및 유효성 검사
-2. **테이블 편집** → 값 변경 시 차트 **즉시 반영**
-3. **통계 확인** → 최소·최대·합·평균·표준편차·중앙값
-4. (옵션) **AI 요약** 버튼 → 현재 데이터에 대한 포인트 요약
-5. (옵션) **RAG 질의응답** → “이번 달 이상치 구간은?” 같은 질문 입력
+> 모든 이미지는 `docs/` 폴더에 위치시키고, 파일명은 아래와 동일하게 맞춰주세요.
 
-> 데모용 **랜덤 채우기(Randomize)** 버튼으로 입력값을 즉시 생성/리셋할 수 있습니다.
+### 홈: 대시보드
 
----
+<img src="./docs/홈.png" alt="홈 대시보드" />
 
-## 📊 대표 화면 (예시)
-
-* 대시보드: 지표 카드(요약 통계) + 라인/막대 차트
-* 인제스트: CSV 업로드 & 오류행 분리 뷰
-* 플레이그라운드: 실시간 테이블↔차트 동기화, 랜덤 데이터 주입
-
-> `/apps/web/src/features/charts`의 래퍼 컴포넌트를 통해 **반응형 레이아웃**과 **툴팁/범례** 옵션을 일관되게 제공합니다.
+* **AI Chat Control**로 카드/문제 페이지를 명령형으로 제어
+* 각 카드에서 데모 페이지로 이동해 **즉시 실행** 가능
 
 ---
 
-## 🔌 대표 API (샘플)
+### 문제 1: CSV 파일 분석
+
+<img src="./docs/문제1.png" alt="문제 1 CSV 분석" />
+
+* **스트리밍 파싱(선택)** + 스키마 검증 → **오류 행 분리**
+* 유효/오류 비율 도넛, 상위 비숫자 토큰, 기본 통계(합·평균 등)
+
+---
+
+### 문제 2: Ping-Pong 통신
+
+<img src="./docs/문제2.png" alt="문제 2 Ping-Pong 통신" />
+
+* **WebSocket**으로 클라이언트–서버 간 **Sync/Async** 플로우 시뮬레이션
+* 최근 20개 **RTT(왕복시간)** 차트, 메시지 로그, 프로토콜(TCP/UDP) 토글
+
+---
+
+### 문제 3: DB 연결 & 쿼리
+
+<img src="./docs/문제3.png" alt="문제 3 DB 쿼리" />
+
+* 날짜/성별/부서/직급 필터 → 테이블 & 차트 동기화
+* 요약 통계: 인원, 평균 급여, 최소/최대 급여
+
+---
+
+### 문제 4: 기온·습도 차트
+
+<img src="./docs/문제4.png" alt="문제 4 기온 습도 차트" />
+
+* 월별 입력값 → 라인/막대/에어리어 **복합 시각화**
+* 이동평균, 정규화 레이더 차트로 **패턴 비교**
+
+---
+
+### 문제 5: 랜덤 응답 카운트(SSE)
+
+<img src="./docs/문제5.png" alt="문제 5 랜덤 응답 SSE" />
+
+* **Server-Sent Events**로 1\~50 동시성, 회수·지연 제어
+* 진행률/결과 누적 모드, 최근 응답 미리보기
+
+---
+
+### 문제 6: Top Laser (Monotonic Stack)
+
+<img src="./docs/문제6.png" alt="문제 6 Top Laser" />
+
+* 막대 그래프 + **레이저 시각화**로 **단조 스택 O(N)** 풀이 과정을 단계별 표시
+* 스텝 인덱스, push/pop 과정이 **UI에 그대로 설명**
+
+---
+
+### 문제 7: 가장 긴 유효한 괄호
+
+<img src="./docs/문제7.png" alt="문제 7 유효 괄호" />
+
+* 스택 기반 알고리즘을 **프리뷰/페어 시각화**로 확인
+* 최장 길이, 구간, 부분 문자열을 결과로 출력
+
+---
+
+### 문제 8: 조세퍼스 순열
+
+<img src="./docs/문제8.png" alt="문제 8 조세퍼스 순열" />
+
+* 원형 시뮬레이터로 제거 순서를 **단계별 애니메이션**
+* 오른쪽 차트/테이블에 **제거 순서 기록** + CSV 저장
+
+---
+
+### 마무리: 디자인 요약
+
+<img src="./docs/마무리.png" alt="마무리 디자인 요약" />
+
+* **공통 레이아웃**(사이드바+헤더+3컬럼)
+* **디자인 시스템**: Tailwind + shadcn/ui, 브랜드 컬러(#003399)
+* **시각화 가이드**: Recharts, 표 헤더 sticky, SSE 단계 표시, 속도 컨트롤 등
+
+---
+
+## 🔌 API 예시
 
 ```
-GET  /api/data/mock               # 데모용 랜덤 데이터
-POST /api/data/upload             # CSV 업로드(멀티파트)
-GET  /api/data/series             # 시계열 데이터 조회 (query: from, to)
+GET  /api/data/mock           # 데모 데이터
+POST /api/data/upload         # CSV 업로드(멀티파트)
+GET  /api/data/series         # 시계열 조회 (from, to)
 
 # (옵션: AI)
-POST /api/ai/summarize            # 요약 생성
-POST /api/ai/rag-query            # 벡터 검색+Q&A
+POST /api/ai/summarize        # 요약
+POST /api/ai/rag-query        # 벡터검색+Q&A
 ```
 
 ---
 
-## 🧠 설계 포인트
+## ✅ 품질 & 로드맵
 
-* **안전한 파싱 & 엄격한 타입**: CSV → 스키마 검증 → 오류/유효 행 분리
-* **성능 고려**
+**품질**
 
-  * 큰 파일: 스트리밍 파싱(선택), 메모리 사용량 제한 옵션
-  * 차트: 가상화·샘플링 전략(데이터 양에 따라)
-  * 코드 스플리팅, Lazy import
-* **UI·DX**
+* Jest 유닛 테스트(통계 유틸, 파서/밸리데이터)
+* ESLint + TypeScript strict, GitHub Actions(빌드/테스트)
 
-  * shadcn/ui + Tailwind 조합으로 **일관된 디자인 시스템**
-  * Chart wrapper로 옵션 재사용, 보일러플레이트 감소
-* **확장성**
+**로드맵**
 
-  * AI 훅/서비스를 **옵션 레이어**로 분리 → API 키가 없어도 동작
-  * DataSource 어댑터 패턴(파일/DB/REST 쉽게 교체)
-
----
-
-## ✅ 테스트 & 품질
-
-* **단위 테스트**: 통계 유틸(`stats.ts`), 파서/밸리데이터 중심 (Jest)
-* **정적 분석**: ESLint + TypeScript strict
-* **PR 가이드**: 작은 단위 커밋, 스쿼시 머지 권장, 린트/빌드 CI
-
-```bash
-pnpm test         # 유닛 테스트
-pnpm lint         # 린트
-pnpm typecheck    # 타입 검사
-```
-
----
-
-## 🗺️ 로드맵
-
-* [ ] 대규모 스트리밍/윈도 차트(수만\~수십만 포인트) 최적화
-* [ ] 데이터 파이프라인 시각화(노드-엣지 플로우)
-* [ ] 대시보드 위젯 저장/공유(프리셋)
+* [ ] 대규모 스트리밍 차트 최적화(수만\~수십만 포인트)
+* [ ] 파이프라인 플로우(노드-엣지) 시각화
+* [ ] 대시보드 프리셋 저장/공유
 * [ ] 멀티 소스 조인(파일+API 혼합 집계)
-* [ ] RAG 파이프라인 샘플(벡터 DB 선택 가이드 포함)
-* [ ] 접근성 & 국제화(i18n) 강화
+* [ ] RAG 샘플(벡터 DB 선택 가이드)
+* [ ] 접근성 & i18n 강화
 
 ---
 
-## 📜 라이선스
+## 📜 라이선스 & 문의
 
-* 본 프로젝트는 **학습·포트폴리오 목적**으로 공개됩니다.
-* 외부 API/모델 사용 시 각 서비스의 약관/정책을 준수하세요.
-
----
-
-## 🙋 문의
-
+* 학습·포트폴리오 목적 공개. 외부 API/모델은 각 서비스 약관 준수.
 * Author: **우도연 (Full-stack · AI-PM)**
 * GitHub: [woodoyeon](https://github.com/woodoyeon)
-* Project: `AI Analytics Dashboard` (2025.09 \~ 진행중)
+* Project: `AI Analytics Dashboard` (2025.09\~ 진행중)
 
-> 아이디어·피드백·기여 제안 모두 환영합니다!
+---
+
+### 📂 이미지 배치 팁
+
+```
+/ (repo root)
+├─ README.md
+└─ docs/
+   ├─ 홈.png
+   ├─ 문제1.png
+   ├─ 문제2.png
+   ├─ 문제3.png
+   ├─ 문제4.png
+   ├─ 문제5.png
+   ├─ 문제6.png
+   ├─ 문제7.png
+   ├─ 문제8.png
+   └─ 마무리.png
+```
+
+필요하면 **영문 버전 README**도 바로 만들어줄게.
